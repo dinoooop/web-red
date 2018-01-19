@@ -1,15 +1,24 @@
-app.controller("StoryController", function ($scope, StoryService) {
-	console.log("response");
-	StoryService.getItems().then(function(response){
-		$scope.story = response;
+app.controller("PageController", function (
+	$scope,
+	AppService, 
+	GeneralService, 
+	SkillService,
+	WorkService
+	) {
+	
+	GeneralService.getItems().then(function(response){
+		$scope.general = response;
 	});
     
-});
-
-app.controller("SkillController", function ($scope, SkillService) {
-	
 	SkillService.getItems().then(function(response){
 		$scope.skills = response;
 	});
     
+    WorkService.getItems().then(function(response){
+		$scope.works = response;
+	});
+
+	$scope.onClickWork = function(id){
+		$scope.popup = AppService.getFromArray($scope.works, 'post_id', id);
+	}
 });

@@ -1,3 +1,19 @@
+app.service("AppService", function () {
+
+    this.getFromArray = function(Obj, key, value){
+        var row = {};
+    
+        angular.forEach(Obj, function (item, index) {
+            if (typeof item[key] != 'undefined' && item[key] == value) {
+                row = item;
+            }
+        });
+
+        return row;
+
+    }
+});
+
 app.service("WebService", function ($http, $q) {
 
     this.request = function (req) {
@@ -15,13 +31,12 @@ app.service("WebService", function ($http, $q) {
     }
 });
 
-app.service("StoryService", function (WebService) {
-
+app.service("GeneralService", function (WebService) {
 
     this.getItems = function () {
         return WebService.request({
             method: 'GET',
-            url: appConst.apiBaseUrl + '/story',
+            url: appConst.apiBaseUrl + '/general',
         });
     }
 
@@ -30,11 +45,22 @@ app.service("StoryService", function (WebService) {
 
 app.service("SkillService", function (WebService) {
 
-
     this.getItems = function () {
         return WebService.request({
             method: 'GET',
             url: appConst.apiBaseUrl + '/skills',
+        });
+    }
+
+    
+});
+
+app.service("WorkService", function (WebService) {
+
+    this.getItems = function () {
+        return WebService.request({
+            method: 'GET',
+            url: appConst.apiBaseUrl + '/works',
         });
     }
 

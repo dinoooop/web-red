@@ -37,23 +37,22 @@
 
   </head>
 
-  <body id="page-top">
+  <body id="page-top" ng-controller="PageController">
 
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel">{{ popup.title }}</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            ...
+            {{ popup.content }}
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
@@ -62,7 +61,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">!D</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">#D</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -103,7 +102,7 @@
       </div>
     </header>
 
-    <section class="bg-primary" id="story" ng-controller="StoryController">
+    <section class="bg-primary" id="story">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
@@ -123,7 +122,7 @@
 
     </section>
       
-    <section id="expertised" ng-controller="SkillController">
+    <section id="expertised">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -145,113 +144,33 @@
       </div>
     </section>
 
-    <section class="p-0" id="works">
 
-      
+    <section class="bg-dark text-white" id="works">
+      <div class="container text-center">
+        <h2 class="mb-4">[ WORKS ]</h2>
+      </div>
+    </section>
 
+    <section class="p-0">
       <div class="container-fluid p-0">
         <div class="row no-gutters popup-gallery">
-          <div class="col-lg-4 col-sm-6 portfolio-box" data-toggle="modal" data-target="#exampleModal">
-            
-              <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="" >
+
+          <div class="col-lg-4 col-sm-6 portfolio-box" ng-repeat="work in works" data-toggle="modal" data-target="#exampleModal" ng-click="onClickWork(work.post_id)">
+              <img class="img-fluid" src="{{work.thumb}}" alt="" >
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
                   <div class="project-name">
-                    Project Name
+                    {{work.title}}
                   </div>
                 </div>
               </div>
-            
-            
           </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/2.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/3.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/4.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/5.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
+
         </div>
       </div>
     </section>
 
-    <section class="bg-dark text-white">
-      <div class="container text-center">
-        <h2 class="mb-4">Download my resume</h2>
-        <a class="btn btn-light btn-xl sr-button" href="#">Download Now!</a>
-      </div>
-    </section>
+    
 
     <section id="contact">
       <div class="container">
@@ -259,10 +178,6 @@
           <div class="col-lg-8 mx-auto text-center">
             <h2 class="section-heading">Let's Get In Touch!</h2>
             <hr class="my-4">
-
-
-
-
             <p class="mb-5">
               Let’s do some awesome works together. <br />
               Send me a mail I will get back to you as soon as possible!
