@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Dinoop KP">
 
     <title>Dinoop's portfolio</title>
 
@@ -94,9 +94,7 @@
             <hr>
           </div>
           <div class="col-lg-8 mx-auto">
-            <p class="mb-5">Developer from Venice of the East. <br />
-            Creating dynamic user centric digital works.</p>
-            <!-- <a class="btn btn-primary btn-xl js-scroll-trigger" href="#story">Story</a> -->
+            <p class="mb-5" ng-bind-html="general.welcome | htmlFormat"></p>
             <a class="scroll-down-button js-scroll-trigger" href="#story"><i class="fa fa-angle-double-down"></i></a>
           </div>
         </div>
@@ -109,11 +107,8 @@
           <div class="col-lg-8 mx-auto text-center">
             <h2 class="section-heading text-white">STORY</h2>
             <hr class="light my-4">
-            <p class="text-faded mb-4">
-
-              Building up an interactive application is fun. It help to pursuit for new technologies that make things more easier. Different clients, varieties of requirements in order to meet them studying further.
-              
-            </p>
+            <p class="text-faded mb-4" ng-bind-html="general.story | htmlFormat"></p>
+            <br />
             <a class="btn btn-light btn-xl js-scroll-trigger" href="#expertised">Know more</a>
           </div>
 
@@ -178,12 +173,9 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading">Let's Get In Touch!</h2>
+            <h2 class="section-heading">CONTACT</h2>
             <hr class="my-4">
-            <p class="mb-5">
-              Let’s do some awesome works together. <br />
-              Send me a mail I will get back to you as soon as possible!
-            </p>
+            <p class="mb-5" ng-bind-html="general.contact | htmlFormat"></p>
           </div>
         </div>
         <div class="row">
