@@ -1,42 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="portfolio">
-
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
     <meta name="author" content="Dinoop KP">
-
+    <meta name="description" content="A portfolio of Dinoop which contains his works related to web development, skills, projects, contact information etc.">
     <title>Dinoop's portfolio</title>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112613836-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-112613836-1');
-    </script>
-
-    <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
-    <!-- Plugin CSS -->
-    <!-- <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet"> -->
-
-    <!-- Custom styles for this template -->
-    <link href="css/creative.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' >
+    <link rel="stylesheet" type='text/css' href="css/styles.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112613836-1"></script>
+    <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-112613836-1'); </script>
   </head>
-
   <body id="page-top" ng-controller="PageController">
 
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -48,9 +25,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body" ng-bind-html="popup.content | htmlFormat">
-            
-          </div>
+          <div class="modal-body" ng-bind-html="popup.content | htmlFormat"></div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
@@ -58,7 +33,6 @@
       </div>
     </div>
 
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">#D</a>
@@ -111,11 +85,8 @@
             <br />
             <a class="btn btn-light btn-xl js-scroll-trigger" href="#expertised">Know more</a>
           </div>
-
         </div>
-
       </div>
-
     </section>
       
     <section id="expertised">
@@ -132,7 +103,6 @@
           <div class="col-lg-4 col-md-12 text-center" ng-repeat="skill in skills">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x text-primary mb-3" ng-class="skill.icon"></i>
-              
               <h3 class="mb-3">{{ skill.title }}</h3>
               <p class="text-muted mb-0 text-justify" ng-bind-html="skill.content | htmlFormat"></p>
             </div>
@@ -140,7 +110,6 @@
         </div>
       </div>
     </section>
-
 
     <section class="bg-dark text-white" id="works">
       <div class="container text-center">
@@ -151,7 +120,6 @@
     <section class="p-0 bg-dark">
       <div class="container-fluid p-0">
         <div class="row no-gutters popup-gallery">
-
           <div class="col-lg-4 col-sm-6 portfolio-box" ng-repeat="work in works" data-toggle="modal" data-target="#exampleModal" ng-click="onClickWork(work.post_id)">
               <img class="img-fluid" src="{{work.thumb}}" alt="" >
               <div class="portfolio-box-caption">
@@ -162,12 +130,9 @@
                 </div>
               </div>
           </div>
-
         </div>
       </div>
     </section>
-
-    
 
     <section id="contact">
       <div class="container">
@@ -184,43 +149,25 @@
             <p><a href="mailto:dinoooop@gmail.com">dinoooop@gmail.com</a></p>
           </div>
         </div>
-
         <br>
-            
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
             <div id="instafeed"></div>
           </div>
         </div>
-
-
       </div>
-    
     </section>
 
-
-    
-
-    <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/creative.js"></script>
     <script src="js/instafeed.min.js"></script>
-    <script src="js/app-const.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.min.js"></script>
     <script src="js/ng-app/angular.min.js"></script>
     <script src="js/ng-app/app.js"></script>
     <script src="js/ng-app/services.js"></script>
     <script src="js/ng-app/controllers.js"></script>
-    
   </body>
 </html>
-
-
