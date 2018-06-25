@@ -273,14 +273,11 @@ body, html {
     color: #FFF;
 }
 
-
 .social-links {
-
-    margin: 70px 0;
-
+    margin: 50px 0;
 }
 
-ul{
+ul.social {
     padding: 0
 }
 .social li {
