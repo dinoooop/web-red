@@ -272,4 +272,23 @@ body, html {
     font-size: 25px;
     color: #FFF;
 }
- 
+
+
+.social-links {
+
+    margin: 70px 0;
+
+}
+
+ul{
+    padding: 0
+}
+.social li {
+    background-color: #85144b;
+    padding: 10px 15px;
+    display: inline-block;
+    margin: 0px
+}
+.social li i {
+    color: #FFF
+}
