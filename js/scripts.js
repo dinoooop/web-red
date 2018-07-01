@@ -72,9 +72,15 @@
     }
   });
 
+  
+  $("body").on("click", ".shchelchok", function(){
+    var posturl = appConst.apiBaseUrl + '/shchelchok';
+    var title = $(this).attr('title');
+    var formdata = {'title' : title};
+    $.post(posturl, formdata, function (response) {}, 'json');
+  });
+
 })(jQuery); // End of use strict
-
-
 
 
 var appConst = {};

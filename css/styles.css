@@ -280,12 +280,18 @@ body, html {
 ul.social {
     padding: 0
 }
-.social li {
+
+.social li{
+    display: inline-block;
+}
+
+.social li a {
+    display: inline-block;
     background-color: #85144b;
     padding: 10px 15px;
-    display: inline-block;
     margin: 0px
 }
+
 .social li i {
     color: #FFF
 }

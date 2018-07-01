@@ -10,7 +10,7 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' >
-    <link rel="stylesheet" type='text/css' href="css/styles.min.css">
+    <link rel="stylesheet" type='text/css' href="css/styles.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112613836-1"></script>
     <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-112613836-1'); </script>
   </head>
@@ -83,7 +83,7 @@
             <hr class="light my-4">
             <p class="text-faded mb-4" ng-bind-html="general.story | htmlFormat"></p>
             <br />
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="#expertised">Know more</a>
+            <a class="btn btn-light btn-xl js-scroll-trigger shchelchok" href="#expertised" title="know-more">Know more</a>
           </div>
         </div>
       </div>
@@ -122,7 +122,7 @@
         <div class="row no-gutters popup-gallery">
           <div class="col-lg-4 col-sm-6 portfolio-box" ng-repeat="work in works" data-toggle="modal" data-target="#exampleModal" ng-click="onClickWork(work.post_id)">
               <img class="img-fluid" src="{{work.thumb}}" alt="" >
-              <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption shchelchok" title="{{work.title}}">
                 <div class="portfolio-box-caption-content">
                   <div class="project-name">
                     {{work.title}}
@@ -146,23 +146,23 @@
         <div class="row">
           <div class="col-lg-4 mx-auto text-center">
             <a href="mailto:dinoooop@gmail.com"><i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i></a>
-            <p><a href="mailto:dinoooop@gmail.com">dinoooop@gmail.com</a></p>
+            <p><a class="shchelchok" title="email" href="mailto:dinoooop@gmail.com">dinoooop@gmail.com</a></p>
           </div>
         </div>
         
         <div class="row social-links">
           <div class="col-lg-8 mx-auto text-center">
             <ul class="social">
-              <li><a href="https://www.facebook.com/dinoooop" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="https://www.instagram.com/din00p" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-              <li><a href="https://in.linkedin.com/in/dinoooop" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-              <li><a href="https://github.com/dinoooop" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-              <li><a href="https://stackoverflow.com/users/3405443/dinoop" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a></li>
+              <li><a class="shchelchok" title="facebook" href="https://www.facebook.com/dinoooop" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a class="shchelchok" title="instagram" href="https://www.instagram.com/din00p" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              <li><a class="shchelchok" title="linkedin" href="https://in.linkedin.com/in/dinoooop" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+              <li><a class="shchelchok" title="github" href="https://github.com/dinoooop" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+              <li><a class="shchelchok" title="stackoverflow" href="https://stackoverflow.com/users/3405443/dinoop" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a></li>
             </ul>
           </div>
         </div>
         
-        <div class="row">
+        <div class="row shchelchok" title="instagram-images"> 
           <div class="col-lg-8 mx-auto text-center">
             <div id="instafeed"></div>
           </div>
@@ -176,7 +176,7 @@
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="js/instafeed.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+    <script src="js/scripts.js"></script>
     <script src="js/ng-app/angular.min.js"></script>
     <script src="js/ng-app/app.js"></script>
     <script src="js/ng-app/services.js"></script>
